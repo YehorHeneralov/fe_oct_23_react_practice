@@ -1,4 +1,4 @@
-// import React from 'react';
+
 import './App.scss';
 import { useState } from 'react';
 import cn from 'classnames';
@@ -20,9 +20,9 @@ const products = productsFromServer.map((product) => {
   };
 });
 
-function FilteredByName(products, searchQuerry, selectedUser) {
+function FilteredByName(productis, searchQuerry, selectedUser) {
   if (!searchQuerry && !selectedUser) {
-    return products;
+    return productis;
   }
 
   return products.filter((product) => {
@@ -171,7 +171,10 @@ export const App = () => {
 
                         <a href="#/">
                           <span className="icon">
-                            <i data-cy="SortIcon" className="fas fa-sort-down" />
+                            <i
+                              data-cy="SortIcon"
+                              className="fas fa-sort-down"
+                            />
                           </span>
                         </a>
                       </span>
